@@ -92,11 +92,18 @@ meow (3)
 m <- 1:20
 m
 
-m <- c(1, 3, 4, 9, 2)
+m <- c(1:20, 19:1)
 m
 
-temp <- c(4, 6, 3)
-temp
+tmp <- c(4, 6, 3)
+tmp
+
+rep(tmp ,10)
+
+rep(tmp,times=c(10,20,30))
+
+tmp <- seq(3,6,by=0.1)
+exp(tmp)*cos(tmp)
 
 y <- matrix(rep(4, 10), 10, 3)
 y
@@ -108,4 +115,22 @@ yVec[ yVec >= 600]
 
 
 
-m <- matrix(nrow = 3, ncol = 3)
+tmp <- matrix( c(1,5,-2,1,2,-1,3,6,-3), nr=3)
+tmp
+tmp %*% tmp %*% tmp == matrix(0, 3, 3)
+tmp[,3] <- tmp[,2] + tmp[,3]
+
+
+tmp <- matrix(c(10,-10,10), b=T, nc=3, nr=15)
+tmp
+t(tmp)%*%tmp
+crossprod(tmp)
+
+tmpFn1 <- function(xVec) {
+    xVec^(1:length(xVec))
+}
+
+tmpFn2 <- function(xVec) {
+    n <- length(xVec)
+    (xVec^(1:n)) / (1:n)
+}
