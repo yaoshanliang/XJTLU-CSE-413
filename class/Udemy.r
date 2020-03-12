@@ -46,3 +46,51 @@ rep(x, each = 3, times = 3)
 x = 4:20
 which(x == 10)
 x[7]
+
+
+# Exercise
+myObject = 1:10
+myObject <- 1:10
+1:10 -> myObject
+assign("myObject", 1:10)
+myObject
+
+sum(myObject)
+
+paste("R is great", c(4, 7, 45), "and I will love it")
+
+x = rep(1:3,  length= 31)
+x
+
+
+# Functions
+f = function(x) {x + x}
+f(10)
+
+f = function(x, y, z) {
+    value = x * y * z;
+    print(value)
+}
+f(1, 2, 3)
+
+# Loops
+for (i in 1: 5) {
+    print(i)
+}
+
+
+# Dataset
+?airmiles
+head(airmiles)
+tail(airmiles)
+
+summary(mtcars)
+plot(mtcars)
+hist(airmiles)
+head(mtcars)
+sum(mtcars$wt)
+attach(mtcars)
+detach(mtcars)
+sum(wt)
+mtcars[2, 6]
+mtcars[c(2, 5, 8), 6]
