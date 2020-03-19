@@ -1,0 +1,5 @@
+dat <- read.table("CSE413-T03 EdgeList.txt", header=TRUE)
+adjmtx <- get.adjacency(graph.edgelist(as.matrix(dat), directed=FALSE))
+g1 <- graph.adjacency(adjmtx)
+plot(g1)
+degree(g1)
